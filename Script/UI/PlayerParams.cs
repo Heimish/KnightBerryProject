@@ -63,6 +63,9 @@ public class PlayerParams : CharacterUI
     private float TipTime = 10f;
     private bool SwapCheck = false;
 
+    [Header("CAUi")]
+    public Image _CounterAttack;
+
     public override void InitParams()
     {
         PlayerParams._instance = this;
@@ -422,6 +425,20 @@ public class PlayerParams : CharacterUI
         Dealer_Tip[RandomValue].enabled = true;
     }
 
+    public void CounterAttack()
+    {
+        if(CPlayerManager._instance._PlayerAni_Contorl._PlayerAni_State_Shild == PlayerAni_State_Shild.Defense_ModeBack)
+        {
+            _CounterAttack.enabled = true;
+
+            _CounterAttack.transform.LookAt(_CounterAttack.transform.position + Camera.main.transform.rotation * Vector3.forward,
+            Camera.main.transform.rotation * Vector3.up);
+        }
+
+        else 
+            _CounterAttack.enabled = false;
+    }
+
     void Start()
     {
         InitParams();
@@ -430,6 +447,7 @@ public class PlayerParams : CharacterUI
 
     void Update()
     {
+        print(CPlayerManager._instance._isCountAttack);
         // Player 캐릭터의 체력 값을 받아온다.
         HpSet();
         PC_HpCheck();
@@ -449,5 +467,8 @@ public class PlayerParams : CharacterUI
         // Tip
         Tip_CorSet();
         Tip_Set();
+
+        // UI_CounterAttack
+        CounterAttack();
     }
 }
