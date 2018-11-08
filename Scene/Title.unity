@@ -46394,6 +46394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fade: {fileID: 192885666}
+  Anyfade: {fileID: 1663316641}
 --- !u!1 &1243194686
 GameObject:
   m_ObjectHideFlags: 0

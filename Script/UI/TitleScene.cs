@@ -15,6 +15,12 @@ public class TitleScene : MonoBehaviour {
     bool isinputanykey = false;
     bool fadeinfinish = false;
 
+    [Header("Anykey")]
+    public Image Anyfade;
+    float Anyfades = 1f;
+    float Anytime = 0;
+    bool fadeinout = false;
+
     AudioSource TitleAudio;
 
     private void TitleStartFadein()
@@ -59,6 +65,51 @@ public class TitleScene : MonoBehaviour {
         }
     }
 
+    private void AnyFadeSet()
+    {
+        if (fadeinout)
+        {
+            AnyFadeout();
+        }
+
+        else if (!fadeinout)
+        {
+            AnyFadein();
+        }
+    }
+
+    private void AnyFadein()
+    {
+        Anytime += Time.deltaTime;
+        if (Anyfades > 0.0f && Anytime >= 0.1f)
+        {
+            Anyfades -= 0.1f;
+            Anyfade.color = new Color(255, 255, 255, Anyfades);
+            Anytime = 0;
+        }
+
+        else if (Anyfades <= 0.0f)
+        {
+            fadeinout = !fadeinout;
+        }
+    }
+
+    private void AnyFadeout()
+    {
+        Anytime += Time.deltaTime;
+        if (Anyfades < 1f && Anytime >= 0.1f)
+        {
+            Anyfades += 0.1f;
+            Anyfade.color = new Color(255, 255, 255, Anyfades);
+            Anytime = 0;
+        }
+
+        else if (Anyfades >= 0.98f)
+        {
+            fadeinout = !fadeinout;
+        }
+    }
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -73,6 +124,7 @@ public class TitleScene : MonoBehaviour {
         // Fade in / Out Set
         TitleStartFadein();
         TitleExitFadeOut();
+        AnyFadeSet();
 
         // SoundVolume
         if (!isinputanykey)
