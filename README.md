@@ -1,2 +1,0 @@
-# KnightBerryProject
-RedWingProject

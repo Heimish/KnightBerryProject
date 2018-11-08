@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1920283347521890}
+  m_IsPrefabParent: 1
+--- !u!1 &1920283347521890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4563811620549436}
+  - component: {fileID: 114217899507355254}
+  m_Layer: 0
+  m_Name: PlayerValueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4563811620549436
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920283347521890}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.98433, y: 3.416316, z: 74.64425}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114217899507355254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1920283347521890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398da7c06cc158943bd9769c9ada362a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fStmAuto: 1
+  fStmAutoTime: 0.1
+  fStmDash: 35
+  fRotation: 800
+  fMoveSpeed: 6
+  fMoveAngle: 1
+  nDamgeShild: 3200000032000000460000003200000046000000
+  nDamgeScythe: 820000008200000096000000
+  nGroggyShild:
+  - 5
+  - 7
+  - 9
+  - 5
+  - 5
+  nGroggyScythe:
+  - 5
+  - 7
+  - 10
+  fShildDamge: 1
+  fSwapCoolTime: 1
+  fCountGroggy: 100
+  fCountAttackDamge: 101
+  fCountAttackReturnTime: 100
+  fScytheTime: 0
+  fScytheTimeHpDown: 0
+  fScytheTimeHpExponential: 0
+  fScytheAttackHpAdd: 15
+  fScytheStartSkillDamge: 20
+  fScytheSkill2Damge: 20
+  fSturnTime: 2
+  fPlayerAttackStiff: 0.1
+  fSweatStm: 0
+  fShildRunDamge: 300
+  fShildRunStm: 0
+  fPlayerHornTime: 1
+  nPlayerHitAddPower: 5
+  fPlayerSweatCountTime: 1
+  fLockOnSpeed: 5
+  TankerAttackZoom:
+  - 0
+  - 0
+  - 0
+  - 0
+  DealerAttackZoom:
+  - 0
+  - 0
+  - 0
+  AfterImageDeadTime: 0
+  ScytheSwapSkillDis: 6
+  ScytheSwapSkillDamage: 200
+  ScytheChopSkillDis: 4
+  ScytheChopSkillDamage: 500
+  SwapMaxGauge: 100
+  ScytheSkillCoolTime: 10
+  ShieldSkillCoolTime: 6
+  ScytheShiftCoolTime: 4
+  ShieldShiftCoolTime: 3
+  VineSpeed: 1.7
+  ScytheAttackDis: 3

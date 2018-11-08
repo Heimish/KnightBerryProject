@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1750442902935676}
+  m_IsPrefabParent: 1
+--- !u!1 &1750442902935676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4209137332165080}
+  - component: {fileID: 114570849511090230}
+  m_Layer: 0
+  m_Name: SoundManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4209137332165080
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750442902935676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.14, y: 4.495865, z: -24.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114570849511090230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1750442902935676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2647fb5b6f3d34f42ba5c12b7e90294e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isBossZone: {fileID: 0}
+  Sounds:
+  - Id: 0
+    Path: event:/SFX/BGM/PC/Purple Planet Music - Cinematic - The Power and the Glory
+      (ingame)
+  - Id: 1
+    Path: event:/SFX/PC/Tanker/Walk/Walk_Rock
+  - Id: 2
+    Path: event:/SFX/PC/Tanker/Walk/Walk_grass
+  - Id: 3
+    Path: event:/SFX/PC/Tanker/Attack/Tanker_normalAttack
+  - Id: 4
+    Path: event:/SFX/PC/Dealer/Attack/dealer_Attack
+  - Id: 5
+    Path: event:/SFX/PC/Tanker/Attack/Tanker_ShieldCounter
+  - Id: 6
+    Path: event:/SFX/PC/Tanker/Attack/Tanker_ShieldGuard
+  - Id: 7
+    Path: event:/SFX/PC/Dealer/Attack/dealer_skill_WideCut
+  - Id: 8
+    Path: event:/SFX/Monster/Hited/Mon_HitSound
+  - Id: 9
+    Path: event:/SFX/PC/Tanker/Attack/Tanker_finishAttack
+  - Id: 10
+    Path: "event:/SFX/Monster/Boss - witch/\uADFC\uC811\uBC29\uCD9C/boss_explode"
+  - Id: 11
+    Path: "event:/SFX/Monster/Boss - witch/\uBC1C\uD310/FirePillarSkill01"
+  - Id: 12
+    Path: "event:/SFX/Monster/Boss - witch/\uD22C\uC0AC\uCCB4/boss_missile2_shoot1"
+  - Id: 13
+    Path: "event:/SFX/Monster/Boss - witch/\uD22C\uC0AC\uCCB4/boss_missile2_spawn1"
+  - Id: 14
+    Path: "event:/SFX/Monster/Boss - witch/\uD22C\uC0AC\uCCB4/boss_missile1_shoot"
+  - Id: 15
+    Path: "event:/SFX/Monster/Boss - witch/\uD22C\uC0AC\uCCB4/boss_missile1_spawn1"
+  - Id: 16
+    Path: event:/SFX/PC/Hited/PC/hited_PC_Meleeattack
+  - Id: 17
+    Path: event:/SFX/PC/Dealer/Walk/Walk_Rock
+  - Id: 18
+    Path: event:/SFX/PC/Dealer/Walk/Walk_grass
+  - Id: 19
+    Path: event:/SFX/PC/Tanker/Roll/Tanker_roll
+  - Id: 20
+    Path: event:/SFX/PC/Dealer/Blink/Dealer_blink
+  - Id: 21
+    Path: event:/SFX/PC/Dealer/Attack/dealer_downward
+  - Id: 22
+    Path: event:/SFX/PC/Tanker/Attack/Tanker_Knockback
+  - Id: 23
+    Path: event:/SFX/PC/Dealer/Swap/dealer_swap-5
+  - Id: 24
+    Path: "event:/SFX/Monster/Boss - witch/\uBCF4\uC2A4\uC774\uB3D9\uC2DC/Boss_walk"
+  - Id: 25
+    Path: "event:/SFX/Monster/Boss - witch/\uBCF4\uC2A4\uC21C\uAC04\uC774\uB3D9\uC2DC/boss_teleport"
+  - Id: 26
+    Path: "event:/SFX/Monster/Boss - witch/\uADFC\uC811\uACF5\uACA9/\uADFC\uC811\uACF5\uACA901/Boss_WitchMeele01"
+  - Id: 27
+    Path: "event:/SFX/Monster/Boss - witch/\uADFC\uC811\uACF5\uACA9/\uADFC\uC811\uACF5\uACA902/Boss_WitchMeele02"
+  - Id: 28
+    Path: "event:/SFX/Monster/Boss - witch/\uADFC\uC811\uACF5\uACA9/\uADFC\uC811\uACF5\uACA903/Boss_WitchMeele03"
+  - Id: 29
+    Path: "event:/SFX/Monster/\uBAAC\uC2A4\uD130 \uC18C\uD658\uB420 \uB54C/Monster_Spawn"
+  - Id: 30
+    Path: event:/SFX/PC/Tanker/Swap/tanker_swap
+  - Id: 31
+    Path: event:/SFX/PC/Dealer/Swap/dealer_swap-5
+  - Id: 32
+    Path: event:/SFX/PC/Tanker/Rush/tanker_rush
+  - Id: 33
+    Path: event:/SFX/PC/Tanker/Defense/tanker_defense
+  - Id: 34
+    Path: event:/SFX/Vine/vine_sound
+  - Id: 35
+    Path: event:/SFX/Vine/vine_sound (fast)
+  - Id: 36
+    Path: "event:/SFX/Monster/\uACE0\uBE14\uB9B0\uC0AC\uB9DD\uC2DC/goblin_death"
+  - Id: 37
+    Path: event:/SFX/Monster/Monster_Goblin02/missile/goblin_missile
+  - Id: 38
+    Path: event:/SFX/Monster/Monster_Goblin02/heal/goblin_heal
+  - Id: 39
+    Path: event:/SFX/Monster/Monster_Goblin03/goblin3_guard_hit
+  - Id: 40
+    Path: event:/SFX/Monster/Monster_Goblin01/goblin1_hit
+  - Id: 41
+    Path: event:/SFX/Monster/Monster_Goblin03/goblin3_hit
+  - Id: 42
+    Path: event:/SFX/Monster/Monster_Goblin01/goblin_sword_whoosh
+  - Id: 43
+    Path: event:/SFX/Monster/Monster_Goblin03/goblin_sword_whoosh
+  - Id: 44
+    Path: event:/SFX/BGM/Boss/boss
+  - Id: 45
+    Path: "event:/SFX/Monster/Boss - witch/\uBCF4\uC2A4 \uADF8\uB85C\uAE30/boss_groggy"
+  - Id: 46
+    Path: event:/SFX/PC/Tanker/Rush/tanker_rush_hit
+  _Volume: 0
