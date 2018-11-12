@@ -48,10 +48,13 @@ public class ABUGameManager : Singleton<ABUGameManager>
 
         if (Input.GetKeyDown(KeyCode.F5))
         {
+            if (_tutorialType == TutorialType.End)
+                return;
+
             foreach (GameObject obj in TutorialObj)
                 obj.SetActive(false);
 
-            MonsterWaveManager.I.AddStage();
+            //MonsterWaveManager.I.AddStage();
             MonsterWaveManager.I.StartWave();
             _tutorialType = TutorialType.End;
         }

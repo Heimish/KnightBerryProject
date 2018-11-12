@@ -242,7 +242,9 @@ public class CPlayerSwap : CPlayerBase
     {
         isEffectTelpo = true;
         // 레이 쏠위치, 방향 -> 캐릭터는 계속 직선만 보기때문에 forward를 사용함
-        Ray ray = new Ray(_Follow.transform.position, _Follow.transform.forward);
+        Vector3 pos = _Follow.transform.position;
+        pos.y += 1.0f;
+        Ray ray = new Ray(pos, _Follow.transform.forward);
         // hit 
         RaycastHit hit = new RaycastHit();
         // 거리
@@ -251,25 +253,25 @@ public class CPlayerSwap : CPlayerBase
         Debug.DrawRay(ray.origin, ray.direction, Color.red, Mathf.Infinity);
 
         // 레이캐스트를 통해 어느 객체에 맞았을 경우 (범위는 캐릭터 거리 이동만큼)
-        //if (Physics.Raycast(ray, out hit, m_fMoveDir))
-        //{
-        //    // 거리 =  (현재좌표 - 레이캐스트 맞은 객체좌표) - m_fDisMin
-        //    // 거리 구한값에서 m_fDisMin를 빼주는 이유
-        //    // 벽에서 사용하면 hit좌표의 끝에 걸려 위로 올라가기때문에 벽보다 좀뒤의 좌표로 계산
-        //    dir = Vector3.Distance(transform.position, hit.point) - m_fDisMin;
-        //    // 현재거리가 m_fDisMin거리보다 작을경우 
-        //    if (dir > m_fDisMin)
-        //    {
-        //        // 캐릭터의 위치를 dir 거리만큼 증가
-        //        transform.position += transform.forward * dir;
-        //    } // 아닐경우 함수호출중단
-        //    else
-        //        return;
-        //}
-        //else
-        //{
-        transform.position += transform.forward * m_fMoveDir;
-        //}
+        if (Physics.Raycast(ray, out hit, m_fMoveDir))
+        {
+            // 거리 =  (현재좌표 - 레이캐스트 맞은 객체좌표) - m_fDisMin
+            // 거리 구한값에서 m_fDisMin를 빼주는 이유
+            // 벽에서 사용하면 hit좌표의 끝에 걸려 위로 올라가기때문에 벽보다 좀뒤의 좌표로 계산
+            dir = Vector3.Distance(transform.position, hit.point) - m_fDisMin;
+            // 현재거리가 m_fDisMin거리보다 작을경우 
+            if (dir > m_fDisMin)
+            {
+                // 캐릭터의 위치를 dir 거리만큼 증가
+                transform.position += transform.forward * dir;
+            } // 아닐경우 함수호출중단
+            else
+                return;
+        }
+        else
+        {
+            transform.position += transform.forward * m_fMoveDir;
+        }
     }
 
     void BlinkStart()
