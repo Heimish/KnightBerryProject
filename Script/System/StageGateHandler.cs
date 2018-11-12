@@ -13,8 +13,10 @@ public class StageGateHandler : MonoBehaviour
 
     void Start ()
     {
-        SetGateState(false);
-
+        foreach (StageGate g in _gates)
+        {
+            g.SetGateState(true);
+        }
     }
 
     void Update ()

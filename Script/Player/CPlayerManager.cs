@@ -202,6 +202,18 @@ public class CPlayerManager : MonoBehaviour
         PlayerRotation();
         PlayerHornOn();
         m_fPlayerHp = Mathf.Clamp(m_fPlayerHp, 0, m_fPlayerMaxHp);
+
+        if (m_fPlayerHp <= 0)
+        {
+            m_fPlayerHp = 0.0f;
+
+            if (_PlayerSwap._PlayerMode == PlayerMode.Shield)
+                _PlayerAni_Contorl._PlayerAni_State_Shild = PlayerAni_State_Shild.Die;
+            else
+                _PlayerAni_Contorl._PlayerAni_State_Scythe = PlayerAni_State_Scythe.Die;
+
+            isDead = true;
+        }
     }
 
     // 플레이어 사망시

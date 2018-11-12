@@ -26,6 +26,9 @@ public class StageCollider : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if (ABUGameManager.I.IsTutorial)
+                return;
+
             if (_clear)
                 return;
 

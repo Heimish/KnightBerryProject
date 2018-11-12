@@ -51,3 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8655f1a617a08924eb8c5d0c1be7379a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TutorialObj:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  KeyTime: 20
+  SkillTime: 20
+  MoreTime: 10
