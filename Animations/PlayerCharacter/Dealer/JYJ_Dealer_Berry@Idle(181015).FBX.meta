@@ -767,13 +767,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: JYJ_Dealer_Berry_Rigging(181018)(Clone)
+    - name: JYJ_Dealer_Berry_Rigging(181018) 1(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0.0000004373411, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Bip001
-      parentName: JYJ_Dealer_Berry_Rigging(181018)(Clone)
+      parentName: JYJ_Dealer_Berry_Rigging(181018) 1(Clone)
       position: {x: -0, y: 0.916, z: -8.8902685e-10}
       rotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
       scale: {x: 0.01, y: 0.01, z: 0.01}
@@ -1378,12 +1378,12 @@ ModelImporter:
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1.0000001}
     - name: Dealer_Berry
-      parentName: JYJ_Dealer_Berry_Rigging(181018)(Clone)
+      parentName: JYJ_Dealer_Berry_Rigging(181018) 1(Clone)
       position: {x: -0, y: 0, z: -0.0000000023841857}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 0.01, y: 0.01, z: 0.01}
     - name: Scythe
-      parentName: JYJ_Dealer_Berry_Rigging(181018)(Clone)
+      parentName: JYJ_Dealer_Berry_Rigging(181018) 1(Clone)
       position: {x: 2.972979, y: 0.9779072, z: -0.2385418}
       rotation: {x: -0.015618089, y: 0.7287264, z: -0.3537293, w: 0.5861652}
       scale: {x: 0.01, y: 0.009999998, z: 0.010000002}
@@ -1399,7 +1399,7 @@ ModelImporter:
     hasTranslationDoF: 1
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0f046c0c8503eba48908740009fe915d,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b8c7e607f2c039c45aa837b590dd56d2,
     type: 3}
   animationType: 3
   humanoidOversampling: 1
