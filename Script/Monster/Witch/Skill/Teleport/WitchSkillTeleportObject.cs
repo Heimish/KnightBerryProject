@@ -104,7 +104,7 @@ public class WitchSkillTeleportObject : MonoBehaviour
         EffectManager.I.OnEffect(EffectType.Witch_Teleport, effectPos, _witch.transform.rotation, 3.0f, 1);
         SoundManager.I.PlaySound(transform, PlaySoundId.Boss_Teleport);
         if (_type == 0)
-            _destination = ((_witch.transform.forward * -1) * 10.0f) + _witch.transform.position;
+            _destination = Raycast();
         else if (_type == 2)
         {
             _destination = Vector3.zero;
@@ -201,5 +201,26 @@ public class WitchSkillTeleportObject : MonoBehaviour
         }
 
         return randDir;
+    }
+
+    private Vector3 Raycast()
+    {
+        Vector3 pos = _witch.transform.position;
+        pos.y += 1.0f;
+        Ray ray = new Ray(pos, _witch.transform.forward * -1.0f);
+        // hit 
+        RaycastHit hit = new RaycastHit();
+        // 거리
+        float dir;
+
+        Debug.DrawRay(ray.origin, ray.direction, Color.red, Mathf.Infinity);
+
+        // 레이캐스트를 통해 어느 객체에 맞았을 경우 (범위는 캐릭터 거리 이동만큼)
+        if (Physics.Raycast(ray, out hit, 8.0f, 1 << LayerMask.NameToLayer("BG")))
+        {
+            return (_witch.transform.forward * 8.0f) + _witch.transform.position;
+        }
+
+        return ((_witch.transform.forward * -1) * 8.0f) + _witch.transform.position;
     }
 }
