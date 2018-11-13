@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class StageGateHandler : MonoBehaviour
 {
-    private StageGate[] _gates;
+    private StageGate[] _gates = new StageGate[4];
 
     private void Awake()
     {
-        _gates = FindObjectsOfType<StageGate>();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            StageGate obj = transform.GetChild(i).GetComponent<StageGate>();
+            if (obj == null)
+                continue;
+
+            _gates[i] = obj;
+            print(_gates[i].name);
+        }
     }
 
     void Start ()
@@ -21,15 +29,38 @@ public class StageGateHandler : MonoBehaviour
 
     void Update ()
     {
-
     }
 
     public void SetGateState(bool flag, int id = 0)
     {
         SoundManager.I.PlaySound(CPlayerManager._instance.transform, PlaySoundId.Vine_Fast);
-        foreach (StageGate g in _gates)
+
+        if (!flag)
         {
-            g.SetGateState(flag);
+            if (id == 1)
+            {
+                for (int i = 0; i < _gates.Length; i++)
+                {
+                    if (i <= 1)
+                        continue;
+
+                    _gates[i].SetGateState(flag);
+                }
+            }
+            else
+            {
+                foreach (StageGate g in _gates)
+                {
+                    g.SetGateState(flag);
+                }
+            }
+        }
+        else
+        {
+            foreach (StageGate g in _gates)
+            {
+                g.SetGateState(flag);
+            }
         }
     }
 }

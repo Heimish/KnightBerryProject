@@ -23,6 +23,8 @@ public class CPlayerMove : CPlayerBase
 
     private void Movement()
     {
+        if (_PlayerManager.isDead)
+            return;
 
         fHorizontal = Input.GetAxisRaw("Horizontal");
         fVertical = Input.GetAxisRaw("Vertical");

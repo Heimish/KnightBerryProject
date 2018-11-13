@@ -47,7 +47,10 @@ public class MonsterWaveManager : Singleton<MonsterWaveManager>
         if (_stages[_curStage].StartNextWave() == AreaState.End)
         {
             _isRun = false;
-            FindObjectOfType<StageGateHandler>().SetGateState(false);
+            if (_curStage < 1)
+                FindObjectOfType<StageGateHandler>().SetGateState(false);
+            else
+                FindObjectOfType<StageGateHandler>().SetGateState(false, 1);
 
             if (_curStage == _stages.Count - 1)
                 _allClear = true;
