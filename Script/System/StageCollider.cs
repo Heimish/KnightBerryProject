@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class StageCollider : MonoBehaviour
 {
     private StageGateHandler _handler;
+    [SerializeField]
+    private int _id;
     private bool _clear;
 
     private void Awake()
